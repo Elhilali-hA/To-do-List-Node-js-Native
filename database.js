@@ -1,6 +1,7 @@
 const http = require('http')
 const fs = require('fs')
 var mysql = require('mysql');
+const { name } = require('ejs');
 
 
 let con = mysql.createConnection({
@@ -23,22 +24,21 @@ function getinfo(){
 }
 
 
-
-
-
-function insert(){
-con.connect(function(err) {
+exports.user = function user(id,name){
+  con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
   });
   con.connect(function(err) { 
-    let sql = "INSERT INTO users (id, name) VALUES ('id','"+ name + "')";
+    let sql = "INSERT INTO users (id, name) VALUES ('"+ id + "','"+ name + "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log(result);
     });
   });
+}
 
+function insert(){
   con.connect(function(err) { 
     let sql = "INSERT INTO project (id, name, description, date) VALUES ('id','"+ title + "', '"+ desc + "', date)";
     con.query(sql, function (err, result) {
@@ -64,6 +64,7 @@ function selectp(){
 exports.select = function get(){
   return selectp();
 };
+
 
 function selectu(){
   con.connect(function(err){
