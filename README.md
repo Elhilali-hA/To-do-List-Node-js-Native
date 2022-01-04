@@ -1,16 +1,33 @@
-# To-do-List-Node-js-Native
+# Vanilla Node REST API
 
-Breif : 
-On vous demande de développer la version 2.0 d'application respectant le diagramme de classes.
+> Full CRUD REST API using Node.js with no framework
 
-​
+This is for learning/experimental purposes. In most cases, you would use something like Express in a production project
 
-Durant la première partie de votre mission, vous avez appris comment stocker les données dans LocalStorage à chaque fois qu'un nouveau projet ou tâche est créé.
+```
+# Routes
+GET      /api/products
+POST     /api/products
+GET      /api/products/:id
+PUT      /api/products/:id
+DELETE   /api/products/:id
 
-​
+```
 
-Cette fois ci, vous étiez dans l’obligation d’utiliser un SGBD MySQL afin de gérer les données de votre application.
+## Usage
 
-​
+```
+# Install dependencies
+npm install
+yarn install
 
-Concevoir et implémenter les mêmes fonctionnalités en utilisant node.js native
+# Run in develpment
+npm run dev
+yarn run dev
+
+# Run in production
+npm start
+yarn start
+```
+
+Feel free to add to this and create a PR. I plan on creating a better router, but if you'd like to do that, feel free

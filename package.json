@@ -1,16 +1,23 @@
 {
-  "name": "node_project-test",
+  "name": "vanilla-node-rest-api",
   "version": "1.0.0",
-  "description": "test first project",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon server.js",
+    "test": "mocha --timeout 10000"
+ 
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.0",
+    "nodemon": "^2.0.15"
+  },
   "dependencies": {
-    "ejs": "^3.1.6",
-    "prompt-sync": "^4.2.0"
+    "uuid": "^8.3.2"
   }
 }
